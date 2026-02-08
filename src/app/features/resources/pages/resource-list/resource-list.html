@@ -1,0 +1,22 @@
+<h2>Resources</h2>
+<ul>
+  @if(resourceList$ | async; as resourceListVm) {
+
+    @if (resourceListVm.loading) {
+      <p>Loading resources…</p>
+    }
+
+    @if (resourceListVm.error; as e) {
+      <p role="alert">{{ e }}</p>
+    }
+
+    @if (!resourceListVm.loading && !resourceListVm.error && resourceListVm.resources) {
+      @for (resource of resourceListVm.resources; track resource.id) {
+        <li><a [routerLink]="['/resources', resource.id]">{{resource.name}}</a></li>
+      } @empty {
+        <p>No resources available.</p>
+      }
+    } 
+  }
+  
+</ul>

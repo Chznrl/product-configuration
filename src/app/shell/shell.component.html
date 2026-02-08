@@ -1,0 +1,21 @@
+<header class="app-header">
+  <div class="app-header__inner">
+    <div class="app-title">Resource Demo</div>
+
+    <nav class="app-nav" aria-label="Main">
+      <a
+        routerLink="/resources"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Resources
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="app-container">
+    <router-outlet></router-outlet>
+  </div>
+</main>

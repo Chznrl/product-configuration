@@ -1,0 +1,13 @@
+<h2>Resource Detail</h2>
+@if (selectedResource$ | async; as resourceVm) {
+  @if (resourceVm.loading) { <p>Loading…</p> }
+  @if (resourceVm.error; as e) { <p role="alert">{{ e }}</p> }
+
+  @if (!resourceVm.loading && resourceVm.resource; as resource) {
+    <h2>{{ resource.name }}</h2>
+    <p>Type: {{ resource.type }}</p>
+    <p>Status: {{ resource.status }}</p>
+  } @else if (!resourceVm.loading && !resourceVm.error) {
+    <p>Not found.</p>
+  }
+}

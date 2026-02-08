@@ -1,0 +1,56 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+  background: #0b1020;
+  color: #e7e9ee;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(11, 16, 32, 0.75);
+  border-bottom: 1px solid rgba(231, 233, 238, 0.12);
+}
+
+.app-header__inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-title {
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+
+.app-nav a {
+  color: #e7e9ee;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(231, 233, 238, 0.12);
+}
+
+.app-nav a:hover {
+  border-color: rgba(231, 233, 238, 0.25);
+}
+
+.app-nav a.is-active {
+  border-color: rgba(231, 233, 238, 0.5);
+  background: rgba(231, 233, 238, 0.06);
+}
+
+.app-main {
+  padding: 18px 0 40px;
+}
+
+.app-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
