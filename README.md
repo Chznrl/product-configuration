@@ -103,7 +103,6 @@ A single build script orchestrates all relevant steps:
 
 - dependency installation
 - OpenAPI type generation
-- post-processing of generated files
 - linting
 - application build
 
