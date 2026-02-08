@@ -99,15 +99,17 @@ This ensures type safety while keeping generated code clean and CI-friendly.
 
 ## Build & Tooling
 
-A single build script orchestrates all relevant steps:
+The project provides a consolidated build script that orchestrates all relevant steps:
 
-- dependency installation
 - OpenAPI type generation
 - linting
 - application build
 
+The build script assumes that dependencies are already installed.
+
 To run the full build pipeline:
 
+npm install  
 npm run build:all
 
 ---
@@ -125,9 +127,9 @@ This allows the architecture to scale without increasing complexity in individua
 
 ## Getting Started
 
-Install dependencies and start the application:
+Install dependencies and start the application locally:
 
-npm run build:all  
+npm install  
 npm start  
 
 The application will be available at:
